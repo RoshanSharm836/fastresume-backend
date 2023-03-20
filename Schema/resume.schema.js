@@ -20,6 +20,7 @@ const resumeschema = new mongoose.Schema(
     github: { type: String },
     LinkedIn: { type: String },
     Portfolio: { type: String },
+    role: { type: String, required: true },
   },
   {
     versionKey: false,
