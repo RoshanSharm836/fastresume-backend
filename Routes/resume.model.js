@@ -5,8 +5,9 @@ const router = express.Router();
 
 router.get("/:param", async (req, res) => {
   try {
-    console.log(req.params);
-    res.send("yes");
+    const { param } = req.params;
+    const data = await resume.findById({ _id: param });
+    res.send(data);
   } catch (error) {
     res.status(500).send(error.message);
   }
